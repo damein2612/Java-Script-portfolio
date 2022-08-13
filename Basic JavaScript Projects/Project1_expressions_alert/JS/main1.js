@@ -1,4 +1,3 @@
-
 document.write(4 + 4);              //function add two number document.write//
 window.alert(4 + 4);              //function add two numbers window alert//
 var sent1 = "This is the begining of the string"              //function add two numbers 

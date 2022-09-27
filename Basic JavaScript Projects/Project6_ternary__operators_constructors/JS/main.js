@@ -19,9 +19,13 @@ function myFunction() {
     document.getElementById("Keywords_and_Constructors").innerHTML = "Erik drives a " + Erik.Vehicle_Color +
      "-colored " + Erik.Vehicle_Model + " manufactured in " + Erik.Vehicle_Year;
 }
+function myFunction1() {
+    document.getElementById("New_and_This").innerHTML = "Erik drives a " + Erik.Vehicle_Color +
+     "-colored " + Erik.Vehicle_Model + " manufactured in " + Erik.Vehicle_Year;
+}
 
 function count_Function() {                         // this is a Nested Function //
-    document.getElementById("Counting").innerHTML = Count();
+    document.getElementById("Nested_Function").innerHTML = Count();
     function Count() {
         var Starting_point = 9;
         function Plus_one () {Starting_point += 1;}

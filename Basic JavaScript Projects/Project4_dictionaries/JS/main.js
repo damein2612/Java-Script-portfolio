@@ -7,5 +7,6 @@ function my_Dictionary() {       //this is a key-value pair //
         Age: 6,
         Sound:"Peep"
     };
-    document.getElementById("Dictionary").innerHTML = ;     // statement key id deleted//
+    delete(Animal.Sound);
+    document.getElementById("Dictionary").innerHTML = Animal.Sound;     // statement key id deleted//
 }

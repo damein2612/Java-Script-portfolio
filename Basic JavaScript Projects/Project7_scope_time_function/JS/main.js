@@ -59,6 +59,9 @@ function Add_numbers_5() {              //this is function with error use chrome
         var Time = new Date() .getHours();
         var Reply;
         if (Time < 12 == Time > 0) {
+            Reply = "It is morning time.";
+        }
+        else if (Time >= 12 == Time < 18) {
             Reply = "It is afternoon.";
         }
         else {

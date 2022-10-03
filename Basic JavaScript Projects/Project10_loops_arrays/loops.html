@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="JS/main.js"defer></script>
+
+    </head>
+    <body>
+        <p id="Loop"></p>
+        <button onclick="Call_Loop()">Click here to execute the loop.</button>
+
+        <p>Find the length of "Hello World!":
+        </p>
+
+        <p id="Hello"></p>
+        
+        <script>
+            let text = "Hello World!";
+            let length = text.length;
+
+            document.getElementById("Hello").innerHTML = length;
+        </script>
+
+        <p id="List_of_Instruments"></p>
+        <button onclick="for_Loop()">Click here.</button>
+
+        <p id="Array"></p>
+        <button onclick="array_Function()">Click here.</button>
+
+        <p id="Constant"></p>
+        <button onclick="constant_function()">Click here! </button>
+
+        <script>
+                
+                var X = 82;
+                    document.write( X );
+                    {
+                    let X = 33;
+                    document.write("<br>" + X);
+                    }
+                    document.write("<br>" + X)
+        </script>
+
+        <p id="return"></p>
+        
+        <p id="Car_Object"></p>
+
+       
+       
+
+<!--This supposed to be the break-->
+    <!--<p id="Javascriptbreak"></p>
+        <script>
+            let text = "";
+            for (let i = 0; i < 10; i++) {
+            if (i === 3) { break; }
+            text += "The number is " + i + "<br>";
+        }
+        document.getElementById("Javascriptbreak").innerHTML = text;
+        </script> -->
+       
+       
+       <!--This a continue statement-->
+        <p id="Javascriptbreak1"></p>
+        <script>
+            let text = "";
+            for (let i = 0; i < 10; i++) {
+            if (i === 3) { continue; }
+            text += "The number is " + i + "<br>";
+        }
+        document.getElementById("Javascriptbreak1").innerHTML = text;
+        </script>
+
+   </body>
+
+
+
+</html>    

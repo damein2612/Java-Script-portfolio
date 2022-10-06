@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="JavaScript/JavaScript_1.js"defer></script>
+        
+    
+    
+    </head>
+    <!--This is a Switch Statement-->
+    <h1>What is your favorite color?</h1>
+    <h3>Pick your favorite color from this list:</h3>
+    <ul>
+        <li>Red</li>
+        <li>Yellow</li>
+        <li>Green</li>
+        <li>Blue</li>
+        <li>Pink</li>
+        <li>Purple</li>
+    </ul>
+    <h3>Enter your choice below:</h3>
+    <input id="Color_Input" type="text">
+    <button onclick="Color_Function()">Submit Color</button>
+    <p id="Output"></p>
+    <body> 
+       <!--this is a getelementsbyclassname() method-->
+        <h1 class="Click">This text will change!</h1>
+        <h3 class="Click">This text will not change.</h3>
+        <button onclick="Hello_World_Function()">Click me!</button>
+
+        <canvas id="ID_Name" width="500" height="250"></canvas>
+        <canvas id="ID_Name" width="500" height="250" style="border:5px solid black;"></canvas>
+    
+    <!-- this is javascript <canvas> graphic -->
+    
+    
+    <img id="Cars" src="pictures/download.jpg" alt="fast car" width="220" height="277">
+
+    <canvas id="Mycanvas" width="250" height="300" style="border: 1px solid #d3d3d3;"></canvas>
+    <p><button onclick="Mycanvas()">Try it</button></p>
+    <script>
+   
+   function Mycanvas() {
+        var c = document.getElementById("Mycanvas");
+        var ctx = c.getContext("2d");
+        var img = document.getElementById("Cars");
+        ctx.drawImage(img, 10, 10);
+    }
+    </script>
+
+<!--This is a canvas LinearGradient-->
+    <canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+    Your browser does not support the HTML5 canvas tag.</canvas>
+    
+    <script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    
+    var grd = ctx.createLinearGradient(0, 0, 170, 0);
+    grd.addColorStop(0, "black");
+    grd.addColorStop(1, "white");
+    
+    ctx.fillStyle = grd;
+    ctx.fillRect(20, 20, 150, 100);
+    </script>
+    
+
+    </body>
+
+
+</html>

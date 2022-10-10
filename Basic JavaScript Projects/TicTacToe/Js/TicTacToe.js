@@ -18,7 +18,7 @@ function placeXOrO(squareNumber) {
             //Active player may only be 'X' or '0'so, if not 'X' it must be '0'
         } else {
             //If activePlayer is equal to '0', the o. png is placed in HTML
-            select.style.backgroundImage = 'url("images/oo.png")';
+            select.style.backgroundImage = 'url("images/o.png")';
         }
         // squareNumber and activePlayer are concatenated together and added to array.
         selectedSquares.push(squareNumber + activePlayer);
@@ -27,7 +27,7 @@ function placeXOrO(squareNumber) {
         //This condition is for changing the active player.
         if (activePlayer === 'X') {
             //If active player is 'X' change it to '0' .
-            activePlayer = '0';
+            activePlayer = 'O';
             //if active player is anything other than 'X'
         } else {
             //change the activePlayer to 'X'
@@ -36,7 +36,7 @@ function placeXOrO(squareNumber) {
         //This function plays placement sound.
         audio('./media/Fireworks_Pack.mp3');
         //This condition checks to see if it is the computers turn.
-        if (activePlayer === '0') {
+        if (activePlayer === 'O') {
             //This function disables clicking for computers turn.
             disableClick();
             //This function waits 1 second before the computer places an image and enables click.
@@ -70,37 +70,37 @@ function placeXOrO(squareNumber) {
 //drawLine() function is called to draw a line on the screen if the condition is met.
 function checkWinConditions() {
     // X 0, 1, 2 condition.
-    if (arrayIncludes('0X', '1X', '2x' )) { drawWinLine(50, 100, 558, 100) }
+    if (arrayIncludes('0X', '1X', '2X' )) { drawWinLine(50, 100, 558, 100) }
     // X 3, 4, 5 condition.
     else if (arrayIncludes('3X', '4X', '5X')) { drawWinLine(50, 304, 558, 304) }
     // X 6, 7, 8 condition.
-    else if (arrayIncludes('6X', '7X', '8x')) { drawWinLine(50, 508, 558, 508) }
+    else if (arrayIncludes('6X', '7X', '8X')) { drawWinLine(50, 508, 558, 508) }
     // X 0, 3, 6 condition.
     else if (arrayIncludes('0X', '3X', '6X')) { drawWinLine(100, 50, 100, 558) }
     // X 1, 4, 7 condition.
     else if (arrayIncludes('1X', '4X', '7X')) { drawWinLine(304, 50, 304, 558) }
     // x 2, 5, 8 condition.
-    else if (arrayIncludes('2X', '5X', '8x')) { drawWinLine(508, 50, 508, 558) }
+    else if (arrayIncludes('2X', '5X', '8X')) { drawWinLine(508, 50, 508, 558) }
     // x 6, 4, 2 condition.
     else if (arrayIncludes('6X', '4X', '2X')) { drawWinLine(100, 508, 510, 90) }
     // X 0, 4, 8 condition.
-    else if (arrayIncludes('0x', '4X', '8x')) { drawWinLine(100, 100, 520, 520) }
-    // 0 0, 1, 2 condition.
-    else if (arrayIncludes('00', '10', '20')) { drawWinLine(50, 100, 558, 100) }
+    else if (arrayIncludes('0X', '4X', '8X')) { drawWinLine(100, 100, 520, 520) }
+    // 0 O, 1, 2 condition.
+    else if (arrayIncludes('0O', '1O', '2O')) { drawWinLine(50, 100, 558, 100) }
     // 0 3, 4, 5 condition.
-    else if (arrayIncludes('30', '40', '50')) { drawWinLine(50, 304, 558, 304) }
+    else if (arrayIncludes('3O', '4O', '5O')) { drawWinLine(50, 304, 558, 304) }
     // 0 6, 7, 8 condition.
-    else if (arrayIncludes('60', '70', '80')) { drawWinLine(50, 508, 558, 508) }
+    else if (arrayIncludes('6O', '7O', '8O')) { drawWinLine(50, 508, 558, 508) }
     // 0 0, 3, 6 condition.
-    else if (arrayIncludes('00', '30', '60')) { drawWinLine(100, 50, 100, 558) }
+    else if (arrayIncludes('0O', '3O', '6')) { drawWinLine(100, 50, 100, 558) }
     // 0 1, 4, 7 condition .
-    else if (arrayIncludes('10', '40', '70')) { drawWinLine(304, 50, 304, 558) }
+    else if (arrayIncludes('1O', '4O', '7O')) { drawWinLine(304, 50, 304, 558) }
     // 0 2, 5, 8 condition.
-    else if (arrayIncludes('20', '50', '80')) { drawWinLine(508, 50, 508, 558) }
+    else if (arrayIncludes('2O', '5O', '8O')) { drawWinLine(508, 50, 508, 558) }
     // 0 6, 4, 2 condition.
-    else if (arrayIncludes('60', '40', '20')) { drawWinLine(100, 508, 510, 90) }
+    else if (arrayIncludes('6O', '4O', '2O')) { drawWinLine(100, 508, 510, 90) }
     // 0 0, 4, 8 condition.
-    else if (arrayIncludes('00', '40', '80')) { drawWinLine(100, 100, 520, 520) }
+    else if (arrayIncludes('0O', '4O', '8O')) { drawWinLine(100, 100, 520, 520) }
     //This condition checks for a tie. If none of the above conditions are met and
     //9 squares are selected the code executes .
     else if (selectedSquares.length >= 9) {
@@ -115,7 +115,7 @@ function checkWinConditions() {
         //These 3 variables will be used to check for 3 in a row.
         const a = selectedSquares.includes(squareA);
         const b = selectedSquares.includes(squareB);
-        const c = selectedSquares.includes(squarec);
+        const c = selectedSquares.includes(squareC);
         //If the 3 variables we pass are all included in our array then
         //true is returned and our else if condition executes the drawLine() function.
         if (a === true && b === true && c === true) { return true; }
@@ -177,7 +177,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
         //This method draws everything we laid out above.
         c.stroke();
         //This condition checks if we've reached the endpoints.
-        if (x1 <= x2 && yl <= y2) {
+        if (x1 <= x2 && y1 <= y2) {
             //This condition adds 10 to the previous end x endpoint.
             if ( x < x2) { x += 10; }
             //This condition adds 10 to the previous end y endpoint.
@@ -187,12 +187,13 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
             if (x >= x2 && y >= y2) { cancelAnimationFrame(animationLoop); }
         //This condition is similar to the one above.
         //This is necessary for the 6, 4, 2 win condition.
-        if (x1 <= x2 && yl >= y2) {
+        if (x1 <= x2 && y1 >= y2) {
             if ( x < x2) { x += 10; }
             if (y > y2) { y -= 10; }
             if (x >= x2 && y <= y2) { cancelAnimationFrame(animationLoop); }
         }
     }
+}
 //This function clears our canvas after our win line is drawn.
 function clear() {
     //This line starts our animation loop.
